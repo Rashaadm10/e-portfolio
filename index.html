@@ -94,35 +94,79 @@
         <div class="scroll__icon click"></div>
       </a>
       <div class="modal">
-
-          <div class="modal__half modal__about">
-            <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
-            <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
-            <p class="modal__para">
-                I'm a 43 year old <b class="red">Frontend Software Engineer</b> with a strong
-                passion for creating engaging web applications and great user <b class="red">experiences</b>.
-                <br>
-                I have experience in HTML, CSS, and JavaScript.  I enjoy working on projects that challenge me to learn new
-                technologies and improve my skills. I'm always looking for new
-                opportunities to <b class="red">grow</b> as a developer and <b class="red">contribute</b> to exciting projects.
-            </p>
-            <div class="modal__languages">
-                <figure class="modal__language">
-                    <img class="modal__language--img" src="./assets/7f9cfb25a60c62fe937daa2387b798e3.png"/>
-                    <span class="language__name">HTML</span>
-                </figure>
-                <figure class="modal__language">
-                  <img class="modal__language--img" src="./assets/icons8-css3-48.png"/>
-                  <span class="language__name">CSS</span>  
-                </figure>
-                <figure class="modal__language">
-                  <img class="modal__language--img" src="./assets/vecteezy_javascript-logo-png-javascript-icon-transparent-png_27127463.png"/>
-                  <span class="language__name">JavaScript</span>  
-                </figure>
-            </div>
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a 43 year old <b class="red">Frontend Software Engineer</b> with
+            a strong passion for creating engaging web applications and great
+            user <b class="red">experiences</b>.
+            <br />
+            I have experience in HTML, CSS, and JavaScript. I enjoy working on
+            projects that challenge me to learn new technologies and improve my
+            skills. I'm always looking for new opportunities to
+            <b class="red">grow</b> as a developer and
+            <b class="red">contribute</b> to exciting projects.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/7f9cfb25a60c62fe937daa2387b798e3.png"
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/icons8-css3-48.png"
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/vecteezy_javascript-logo-png-javascript-icon-transparent-png_27127463.png"
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
           </div>
-          <div class="modal__half modal__contact">Let's have a chat!</div>
         </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities.
+          </h4>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__label">Name</label>
+              <input class="input" name="user_name" type="text" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" for="message">Message</label>
+              <textarea class="input" name="message" type="text" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
+      </div>
     </section>
     <section id="projects">
       <div class="container">
@@ -215,7 +259,11 @@
       <div class="container">
         <div class="row footer__row">
           <figure>
-            <img class="footer__logo--img" src="./assets/IMG_20170418_085302_383_125949.jpg" alt="" />
+            <img
+              class="footer__logo--img"
+              src="./assets/IMG_20170418_085302_383_125949.jpg"
+              alt=""
+            />
           </figure>
           <div class="footer__social--list">
             <a
